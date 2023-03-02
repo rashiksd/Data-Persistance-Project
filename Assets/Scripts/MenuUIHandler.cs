@@ -6,19 +6,17 @@ using UnityEditor;
 #endif
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuUIHandler : MonoBehaviour
 {
-    public TMP_InputField TMP_InputField;
+     public TMP_InputField TMP_InputField;
     public void StartNew()
     {
-        SceneManager.LoadScene(1);
-    }
-
-    private void Start()
-    {
         MenuManager.Instance.playerName = TMP_InputField.text;
-    }
+        SceneManager.LoadScene(1);
+    }    
+
 
     public void Exit()
     {

@@ -18,11 +18,14 @@ public class MainManager : MonoBehaviour
     
     private bool m_GameOver = false;
 
-    public string playerName;
+    private string playerName;
+   
 
     // Start is called before the first frame update
     void Start()
     {
+        playerName = MenuManager.Instance.playerName;
+        ScoreText.text = playerName + $" : {m_Points}";
         const float step = 0.6f;
         int perLine = Mathf.FloorToInt(4.0f / step);
         
@@ -62,6 +65,8 @@ public class MainManager : MonoBehaviour
             }
         }
     }
+
+ 
 
     void AddPoint(int point)
     {
