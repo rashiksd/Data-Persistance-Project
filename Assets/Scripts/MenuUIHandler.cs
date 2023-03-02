@@ -18,7 +18,7 @@ public class MenuUIHandler : MonoBehaviour
         MenuManager.Instance.LoadHighScore();
         if (MenuManager.Instance != null)
         {
-            highScore.text = "High Score : " + MenuManager.Instance.highScoreName + ":" + MenuManager.Instance.highScore;
+            highScore.text = "High Score : " + MenuManager.Instance.highScoreName + " : " + MenuManager.Instance.highScore;
         }
     }
     public void StartNew()

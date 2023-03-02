@@ -34,7 +34,7 @@ public class MainManager : MonoBehaviour
         {
             highScoreName = MenuManager.Instance.highScoreName;
             highScore = MenuManager.Instance.highScore;
-            highScoreText.text = highScoreName + ":" + highScore;
+            highScoreText.text = "High Score : " + highScoreName + " : " + highScore;
         }
         
         const float step = 0.6f;
@@ -95,6 +95,12 @@ public class MainManager : MonoBehaviour
         }
         m_GameOver = true;
         GameOverText.SetActive(true);
+        
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
 
